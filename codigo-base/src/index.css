@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: #f7f7f8;
+  color: #1a1a1a;
+}
+
+.app {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.app__header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.app__header h1 {
+  font-size: 1.4rem;
+  margin: 0;
+  margin-right: auto;
+}
+
+/* --- SearchBar --- */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search-bar__toggle {
+  border: none;
+  background: transparent;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.search-bar__input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  /* TODO (Fase 3): esta es la propiedad candidata para animar el expand/collapse */
+}
+
+/* --- CartIcon --- */
+.cart-icon {
+  position: relative;
+  font-size: 1.4rem;
+}
+
+.cart-icon__count {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background: #e02020;
+  color: #fff;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  padding: 1px 6px;
+}
+
+/* --- FilterOptions --- */
+.filter-options {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-options__item {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.filter-options__item.is-active {
+  border-color: #1a1a1a;
+  font-weight: 600;
+  /* TODO (Fase 3): reemplazar/complementar con una transición animada */
+}
+
+/* --- ProductCard --- */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.product {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.product__image {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.product__name {
+  font-size: 0.95rem;
+  margin: 4px 0;
+}
+
+.product__price {
+  font-weight: 600;
+  margin: 4px 0 12px;
+}
+
+.add-to-cart-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #1a1a1a;
+  color: #fff;
+  cursor: pointer;
+  /* TODO (Fase 3): esta es la propiedad candidata para animar la interacción de click */
+}
