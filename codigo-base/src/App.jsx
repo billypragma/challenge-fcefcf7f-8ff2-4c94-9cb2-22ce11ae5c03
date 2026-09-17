@@ -4,6 +4,7 @@ import CartIcon from './components/CartIcon.jsx';
 import SearchBar from './components/SearchBar.jsx';
 import FilterOptions from './components/FilterOptions.jsx';
 import { products, filterCategories } from './data/products.js';
+import { ToastProvider } from './components/Toast.jsx';
 
 export default function App() {
   const [cartCount, setCartCount] = useState(0);
@@ -22,6 +23,7 @@ export default function App() {
   }, [activeCategory, query]);
 
   return (
+    <ToastProvider> 
     <div className="app">
       <header className="app__header">
         <h1>Tienda VTEX</h1>
@@ -45,5 +47,6 @@ export default function App() {
         ))}
       </main>
     </div>
+    </ToastProvider>
   );
 }
