@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 import ProductCard from './components/ProductCard.jsx';
 import CartIcon from './components/CartIcon.jsx';
 import SearchBar from './components/SearchBar.jsx';
-import FilterOptions from './components/FilterOptions.jsx';
+import FilterOptions from './components/FilterOptions/FilterOptions.jsx';
 import { products, filterCategories } from './data/products.js';
 import { ToastProvider } from './components/Toast.jsx';
 
